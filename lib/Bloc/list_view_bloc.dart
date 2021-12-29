@@ -15,7 +15,7 @@ class ListViewBloc {
 
   searchAndFilterByTitle(String searchText, List<UserDataModel> data) {
     if (searchText.isEmpty) {
-      _userDataFetcher.sink.add(data);
+      fetchUserData();
     } else {
       List<UserDataModel> searchResult = [];
       for (UserDataModel userData in data) {

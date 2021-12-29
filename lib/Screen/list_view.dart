@@ -25,8 +25,7 @@ class ListViewScreen extends StatelessWidget {
                         const InputDecoration(hintText: 'Search by title'),
                     textAlign: TextAlign.center,
                     onChanged: (value) {
-                      listViewBloc.searchAndFilterByTitle(
-                          value, snapshot.data!);
+                      listViewBloc.searchAndFilterByTitle(value);
                     },
                   ),
                   Expanded(
@@ -58,6 +57,7 @@ class ListViewScreen extends StatelessWidget {
                                   height: 5,
                                 ),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     const Text('Title : '),
                                     SizedBox(
@@ -74,6 +74,7 @@ class ListViewScreen extends StatelessWidget {
                                   height: 5,
                                 ),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     const Text('Body : '),
                                     SizedBox(
